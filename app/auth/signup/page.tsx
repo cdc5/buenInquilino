@@ -59,20 +59,22 @@ export default function Page() {
   }
 
   return (
-    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10 bg-background">
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10 bg-[#f5f3ee]">
       <div className="w-full max-w-sm">
         <div className="flex flex-col gap-6">
           <div className="text-center mb-6">
-            <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 bg-primary rounded flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-2xl">B</span>
+            <Link href="/" className="inline-block">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 bg-[#1a2234] rounded flex items-center justify-center">
+                  <span className="text-white font-bold text-2xl">B</span>
+                </div>
               </div>
-            </div>
-            <h1 className="text-2xl font-bold">BuenInquilino</h1>
+              <h1 className="text-2xl font-bold text-[#1a2234]">BuenInquilino</h1>
+            </Link>
           </div>
-          <Card>
+          <Card className="border-0 shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl">Crea tu cuenta</CardTitle>
+              <CardTitle className="text-2xl text-[#1a2234]">Crea tu cuenta</CardTitle>
               <CardDescription>
                 Regístrate para comenzar a evaluar inquilinos
               </CardDescription>
@@ -90,6 +92,7 @@ export default function Page() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       disabled={isLoading}
+                      className="border-[#e8e6e1]"
                     />
                   </div>
                   <div className="grid gap-2">
@@ -102,6 +105,7 @@ export default function Page() {
                       onChange={(e) => setPassword(e.target.value)}
                       disabled={isLoading}
                       minLength={6}
+                      className="border-[#e8e6e1]"
                     />
                   </div>
                   <div className="grid gap-2">
@@ -114,18 +118,23 @@ export default function Page() {
                       onChange={(e) => setRepeatPassword(e.target.value)}
                       disabled={isLoading}
                       minLength={6}
+                      className="border-[#e8e6e1]"
                     />
                   </div>
-                  {error && <p className="text-sm text-destructive">{error}</p>}
-                  <Button type="submit" className="w-full" disabled={isLoading}>
+                  {error && <p className="text-sm text-red-500">{error}</p>}
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-[#4eca8b] hover:bg-[#3db978] text-white" 
+                    disabled={isLoading}
+                  >
                     {isLoading ? 'Creando cuenta...' : 'Registrarse'}
                   </Button>
                 </div>
-                <div className="mt-4 text-center text-sm">
+                <div className="mt-4 text-center text-sm text-[#5a6478]">
                   ¿Ya tienes cuenta?{' '}
                   <Link
                     href="/auth/login"
-                    className="text-primary hover:underline underline-offset-4"
+                    className="text-[#4eca8b] hover:underline underline-offset-4 font-medium"
                   >
                     Inicia sesión
                   </Link>
