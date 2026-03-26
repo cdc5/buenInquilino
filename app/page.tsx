@@ -8,8 +8,46 @@ import { Check, Star, FileText, User, Briefcase, FileCheck, CreditCard } from 'l
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* Header Navigation */}
+      <header className="bg-[#1a2234] sticky top-0 z-50 border-b border-[#2a3344]">
+        <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
+                <span className="text-[#1a2234] font-bold text-lg">B</span>
+              </div>
+              <span className="text-white font-bold text-lg hidden sm:inline">BuenInquilino</span>
+            </Link>
+
+            {/* Navigation Links - Hidden on mobile */}
+            <div className="hidden md:flex items-center gap-8">
+              <a href="#proceso" className="text-[#8a94a6] hover:text-white transition-colors text-sm">
+                ¿Cómo funciona?
+              </a>
+              <a href="#muestra" className="text-[#8a94a6] hover:text-white transition-colors text-sm">
+                Muestra
+              </a>
+              <a href="#precio" className="text-[#8a94a6] hover:text-white transition-colors text-sm">
+                Precio
+              </a>
+              <a href="#opiniones" className="text-[#8a94a6] hover:text-white transition-colors text-sm">
+                Opiniones
+              </a>
+            </div>
+
+            {/* CTA Button */}
+            <Link href="/auth/signup">
+              <Button className="bg-[#4eca8b] hover:bg-[#3db978] text-white px-6 py-2 rounded-lg text-sm">
+                Empezar →
+              </Button>
+            </Link>
+          </div>
+        </nav>
+      </header>
+
       {/* Hero Section - Dark Navy Background */}
-      <section className="bg-[#1a2234] min-h-[90vh] px-4 sm:px-6 lg:px-8 py-16 relative">
+      <section className="bg-[#1a2234] min-h-[85vh] px-4 sm:px-6 lg:px-8 py-16 relative">
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)`,
@@ -42,14 +80,16 @@ export default function Home() {
                 Evaluar un inquilino →
               </Button>
             </Link>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-[#3a4456] bg-transparent text-white hover:bg-[#2a3344] px-8 py-6 text-lg rounded-lg"
-            >
-              <FileText className="w-5 h-5 mr-2" />
-              Ver informe de ejemplo
-            </Button>
+            <a href="/evaluacion-ejemplo.pdf" download="informe-ejemplo-bueninquilino.pdf">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-[#3a4456] bg-transparent text-white hover:bg-[#2a3344] px-8 py-6 text-lg rounded-lg"
+              >
+                <FileText className="w-5 h-5 mr-2" />
+                Ver informe de ejemplo
+              </Button>
+            </a>
           </div>
 
           {/* Social Proof */}
@@ -68,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Process Section - Cream Background */}
-      <section className="bg-[#f5f3ee] py-20 px-4 sm:px-6 lg:px-8">
+      <section id="proceso" className="bg-[#f5f3ee] py-20 px-4 sm:px-6 lg:px-8 scroll-mt-16">
         <div className="max-w-6xl mx-auto">
           {/* Section Label */}
           <p className="text-[#1a2234] text-sm font-semibold tracking-wider uppercase mb-4">
