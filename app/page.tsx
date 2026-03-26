@@ -80,7 +80,7 @@ export default function Home() {
                 Evaluar un inquilino →
               </Button>
             </Link>
-            <a href="/evaluacion-ejemplo.pdf" download="informe-ejemplo-bueninquilino.pdf">
+            <a href="/informe-ejemplo.pdf" download="informe-bueninquilino.pdf">
               <Button 
                 size="lg" 
                 variant="outline" 
@@ -179,7 +179,7 @@ export default function Home() {
       </section>
 
       {/* Sample Report Section - Dark Navy */}
-      <section className="bg-[#1a2234] py-20 px-4 sm:px-6 lg:px-8">
+      <section id="muestra" className="bg-[#1a2234] py-20 px-4 sm:px-6 lg:px-8 scroll-mt-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Label */}
           <p className="text-[#4eca8b] text-sm font-semibold tracking-wider uppercase mb-4">
@@ -197,15 +197,17 @@ export default function Home() {
           </p>
           
           {/* CTA Button */}
-          <Button size="lg" className="bg-[#4eca8b] hover:bg-[#3db978] text-white px-8 py-6 text-lg rounded-lg">
-            <FileText className="w-5 h-5 mr-2" />
-            Descargar PDF de muestra
-          </Button>
+          <a href="/informe-ejemplo.pdf" download="informe-bueninquilino.pdf">
+            <Button size="lg" className="bg-[#4eca8b] hover:bg-[#3db978] text-white px-8 py-6 text-lg rounded-lg">
+              <FileText className="w-5 h-5 mr-2" />
+              Descargar PDF de muestra
+            </Button>
+          </a>
         </div>
       </section>
 
       {/* Pricing Section - Cream Background */}
-      <section className="bg-[#f5f3ee] py-20 px-4 sm:px-6 lg:px-8">
+      <section id="precio" className="bg-[#f5f3ee] py-20 px-4 sm:px-6 lg:px-8 scroll-mt-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Label */}
           <p className="text-[#1a2234] text-sm font-semibold tracking-wider uppercase mb-4">
@@ -260,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Cream Background */}
-      <section className="bg-[#f5f3ee] py-20 px-4 sm:px-6 lg:px-8">
+      <section id="opiniones" className="bg-[#f5f3ee] py-20 px-4 sm:px-6 lg:px-8 scroll-mt-16">
         <div className="max-w-6xl mx-auto">
           {/* Section Label */}
           <p className="text-[#1a2234] text-sm font-semibold tracking-wider uppercase mb-4">
